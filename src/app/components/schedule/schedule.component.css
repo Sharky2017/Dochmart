@@ -1,0 +1,69 @@
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.hour {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.hour:hover {
+  background-color: #e0e0e0;
+}
+
+.hour.available {
+  background-color: #c6f7c5; /* Verde claro */
+  cursor: pointer;
+}
+
+.hour.unavailable {
+  background-color: #f7c6c6; /* Rojo claro */
+  cursor: not-allowed; 
+}
+
+.disabled {
+  pointer-events: none; /* Desactiva la interacción con el elemento */
+}
+
+.modal {
+  display: none;
+}
+
+.modal.d-block {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  max-width: 500px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.text-danger {
+  color: red;
+}

@@ -1,0 +1,30 @@
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.available {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.unavailable {
+  background-color: red;
+  color: white;
+  cursor: not-allowed; /* Cambia el cursor para indicar que no está habilitado */
+}
+
+.disabled {
+  pointer-events: none; /* Desactiva la interacción con el elemento */
+}
+

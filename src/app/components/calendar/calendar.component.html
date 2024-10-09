@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-info my-4" role="alert">
+        Bienvenido. Elija un día para reservar la entrega de material de concreto.
+      </div>
+      <h2>Calendario de Reservas</h2>
+
+      <div class="calendar">
+        <!-- <div class="row">
+          <div class="col text-center">Lun</div>
+          <div class="col text-center">Mar</div>
+          <div class="col text-center">Mié</div>
+          <div class="col text-center">Jue</div>
+          <div class="col text-center">Vie</div>
+          <div class="col text-center">Sáb</div>
+          <div class="col text-center">Dom</div>
+        </div> -->
+
+        <div class="row g-2">
+          <div class="alert text-center alert-light p-1" role="alert">
+            Mes de Septiembre 2024
+          </div>
+          <div *ngFor="let day of getAvailableDates()" class="col-1 day"
+               [ngClass]="getDayStatus(day)"
+               [attr.disabled]="getDayStatus(day) === 'unavailable' ? true : null"
+               (click)="getDayStatus(day) === 'available' ? selectDate(day) : null">
+            {{ day | date: 'd' }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

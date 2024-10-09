@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+    <h2>Historial de Reservas</h2>
+    <div *ngIf="reservations.length === 0" class="alert alert-info" role="alert">
+      No hay reservas realizadas.
+    </div>
+    
+    <table class="table table-bordered" *ngIf="reservations.length > 0">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo Electrónico</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of reservations">
+          <td>{{ reservation.name }}</td>
+          <td>{{ reservation.email }}</td>
+          <td>{{ reservation.phone }}</td>
+          <td>{{ reservation.date }}</td>
+          <td>{{ reservation.hour }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
